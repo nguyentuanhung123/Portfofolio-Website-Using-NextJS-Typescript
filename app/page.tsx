@@ -1,7 +1,9 @@
 "use client";
+import AboutMe from '@/components/AboutMe';
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav'
 import NavMobile from '@/components/NavMobile'
+import Services from '@/components/Services';
 import React, { useState } from 'react'
 
 
@@ -18,10 +20,12 @@ const HomePage = () => {
   }
 
   return (
-    <div className='overflow-hidden h-[2000px]'>
+    <div className='overflow-hidden'>
       <NavMobile showNav={showNav} closeNav={closeNavHandler}/>
       <Nav openNav={showNavHandler}/>
       <Hero />
+      <AboutMe />
+      <Services />
     </div>
   )
 }
