@@ -1,6 +1,8 @@
 "use client";
 import AboutMe from '@/components/AboutMe';
 import Blog from '@/components/Blog';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Nav from '@/components/Nav'
 import NavMobile from '@/components/NavMobile'
@@ -36,6 +38,8 @@ const HomePage = () => {
       <Price />
       <Reviews />
       <Blog />
+      <Contact />
+      <Footer />
     </div>
   )
 }
