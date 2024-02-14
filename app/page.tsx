@@ -11,7 +11,10 @@ import Project from '@/components/Project';
 import Reviews from '@/components/Reviews';
 import Services from '@/components/Services';
 import Skills from '@/components/Skills';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 
 const HomePage = () => {
@@ -25,6 +28,16 @@ const HomePage = () => {
   const closeNavHandler = () => {
     setShowNav(false);
   }
+
+  //animation setup
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      easing: "ease",
+      once: true,
+      anchorPlacement: "top-bottom"
+    })
+  }, []) 
 
   return (
     <div className='overflow-hidden'>
